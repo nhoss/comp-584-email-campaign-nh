@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Turtles Against Plastic Straws</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <style type="text/css">
+    /* CLIENT-SPECIFIC STYLES */
+    body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+    table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+    img { -ms-interpolation-mode: bicubic; }
+
+    /* RESET */
+    img { border: 0; height: auto; line-height: 100%; outline: none; text-decoration: none; }
+    table { border-collapse: collapse !important; }
+    body { height: 100% !important; margin: 0 !important; padding: 0 !important; width: 100% !important; }
+
+    /* iOS BLUE LINKS */
+    a[x-apple-data-detectors] {
+      color: inherit !important;
+      text-decoration: none !important;
+      font-size: inherit !important;
+      font-family: inherit !important;
+      font-weight: inherit !important;
+      line-height: inherit !important;
+    }
+
+    /* GMAIL BLUE LINKS */
+    u + #body a {
+      color: inherit;
+      text-decoration: none;
+      font-size: inherit;
+      font-family: inherit;
+      font-weight: inherit;
+      line-height: inherit;
+    }
+
+    /* SAMSUNG MAIL BLUE LINKS */
+    #MessageViewBody a {
+      color: inherit;
+      text-decoration: none;
+      font-size: inherit;
+      font-family: inherit;
+      font-weight: inherit;
+      line-height: inherit;
+    }
+
+    /* UNIVERSAL */
+    a { text-decoration: none; }
+
+    /* BUTTON + LINK INTERACTIVITY (supported clients) */
+    .btn { display:inline-block; font-family: Arial, Helvetica, sans-serif; font-weight:700; border-radius:10px; }
+    .btn-primary { background-color:#0b3d91; color:#ffffff; }
+    .btn-secondary { background-color:#ffffff; color:#0b3d91; border:2px solid #0b3d91; }
+    .btn, .link { transition: filter 200ms ease, transform 200ms ease, color 200ms ease, background-color 200ms ease; }
+    .btn:hover { filter: brightness(0.92); transform: translateY(-2px); }
+    .btn:active { transform: translateY(1px); }
+    .link:hover { text-decoration: underline !important; }
+
+    /* ANIMATION (avoid opacity/scale) */
+    .animated-bar {
+      background: linear-gradient(90deg, #0b3d91, #10a3b7, #0b3d91);
+      background-size: 200% 100%;
+      animation: wave 7s ease-in-out infinite;
+    }
+    @keyframes wave {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* SIMPLE TAB INTERACTIVITY (radio + checked technique) */
+    .tab-input { display:none !important; }
+    .tab-label { display:block; padding:12px 10px; border:1px solid #d7dde3; border-radius:999px; font-family: Arial, Helvetica, sans-serif; font-size:14px; line-height:14px; font-weight:700; color:#0b3d91; background:#ffffff; }
+    .tab-panel { display:none; }
+    #tab-home:checked ~ .tab-wrap #panel-home,
+    #tab-school:checked ~ .tab-wrap #panel-school,
+    #tab-work:checked ~ .tab-wrap #panel-work { display:block !important; }
+    #tab-home:checked ~ .tab-wrap label[for="tab-home"],
+    #tab-school:checked ~ .tab-wrap label[for="tab-school"],
+    #tab-work:checked ~ .tab-wrap label[for="tab-work"] { background:#0b3d91; color:#ffffff; border-color:#0b3d91; }
+
+    /* RESPONSIVE */
+    @media screen and (max-width: 600px) {
+      .container { width: 100% !important; }
+      .mobile-padding { padding-left: 16px !important; padding-right: 16px !important; }
+      .stack { display: block !important; width: 100% !important; }
+      .center-on-mobile { text-align: center !important; }
+
+      /* Adjust text size on mobile */
+      .h1 { font-size: 24px !important; line-height: 30px !important; }
+      .h2 { font-size: 18px !important; line-height: 24px !important; }
+      .p { font-size: 15px !important; line-height: 22px !important; }
+      .tab-label { font-size: 15px !important; line-height: 15px !important; }
+    }
+  </style>
+</head>
+
+<body id="body" style="margin:0 !important; padding:0 !important; background-color:#f3f5f7;">
+
+  <!--
+    SINGLE COLUMN TABLE LAYOUT
+    Outer table: full width (fluid)
+    Inner table: fixed width (recommended 600px)
+  -->
+  <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color:#f3f5f7;">
+    <tr>
+      <td align="center" style="padding: 24px 12px;">
+
+        <!-- INNER FIXED TABLE (600px) -->
+        <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" class="container" style="width:600px; max-width:600px; background-color:#ffffff; border-radius:14px; overflow:hidden;">
+
+          <!-- LOGO / TOP BAR -->
+          <tr>
+            <td align="center" style="padding: 18px 24px; background-color:#0b3d91;">
+              <img src="images/heroturtle.png" width="64" alt="Turtle Committee" style="display:block; width:64px; max-width:64px; height:auto; border-radius:999px;" />
+            </td>
+          </tr>
+
+          <!-- HEADLINE + INTRO -->
+          <tr>
+            <td align="center" class="mobile-padding" style="padding: 28px 40px 16px 40px; font-family: Arial, Helvetica, sans-serif;">
+              <h1 class="h1" style="margin:0; font-size:28px; line-height:34px; color:#0b3d91; font-weight:700; text-align:center;">
+                Turtles Against Plastic Straws
+              </h1>
+              <p class="p" style="margin:14px 0 0 0; font-size:16px; line-height:24px; color:#333333; text-align:center;">
+                The Turtle Committee is taking action against the massive buildup of straws in our neighborhoods.
+                Our spokesperson will address the issue shortly.
+              </p>
+            </td>
+          </tr>
+
+          <!-- HERO IMAGE (RESPONSIVE) -->
+          <tr>
+            <td align="center" style="padding: 10px 0 0 0;">
+              <img src="images/Turtle.png" width="600" alt="Turtle" style="display:block; width:100%; max-width:600px; height:auto;" />
+            </td>
+          </tr>
+
+          <!-- BODY COPY WITH BACKGROUND IMAGE -->
+          <tr>
+            <td align="center" background="images/tbackground.png" style="background-image:url('images/tbackground.png'); background-size:cover; background-position:center; background-repeat:no-repeat;">
+
+              <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                  <td align="center" class="mobile-padding" style="padding: 34px 40px; font-family: Arial, Helvetica, sans-serif;">
+
+                    <!-- solid panel so text stays readable on top of the background image -->
+                    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color:#ffffff; border-radius:12px;">
+                      <tr>
+                        <td align="center" style="padding: 22px 22px 10px 22px;">
+                          <h2 class="h2" style="margin:0; font-size:20px; line-height:26px; color:#111111; font-weight:700; text-align:center;">
+                            Follow us next week for a riveting review on straws!
+                          </h2>
+                          <p class="p" style="margin:10px 0 0 0; font-size:15px; line-height:22px; color:#333333; text-align:center;">
+                            In the meantime, join the movement and help us reduce single-use plastics.
+                          </p>
+                        </td>
+                      </tr>
+
+                      <!-- BUTTONS (CENTERED + EXTRA CLICK SPACE) -->
+                      <tr>
+                        <td align="center" style="padding: 14px 22px 22px 22px;">
+                          <table role="presentation" border="0" cellspacing="0" cellpadding="0" align="center">
+                            <tr>
+                              <td align="center" style="padding: 10px 0;">
+
+                                <!-- Primary button -->
+                                <table role="presentation" border="0" cellspacing="0" cellpadding="0" align="center" style="margin:0 auto;">
+                                  <tr>
+                                    <td align="center" bgcolor="#0b3d91" style="border-radius: 10px;">
+                                      <a class="btn btn-primary" href="#" target="_blank" style="display:inline-block; font-size:16px; line-height:16px; font-weight:700; color:#ffffff; padding:16px 26px; border-radius:10px;">
+                                        Take the Pledge
+                                      </a>
+                                    </td>
+                                  </tr>
+                                </table>
+
+                                <div style="height:14px; line-height:14px; font-size:14px;">&nbsp;</div>
+
+                                <!-- Secondary button -->
+                                <table role="presentation" border="0" cellspacing="0" cellpadding="0" align="center" style="margin:0 auto;">
+                                  <tr>
+                                    <td align="center" bgcolor="#ffffff" style="border-radius: 10px; border:2px solid #0b3d91;">
+                                      <a class="btn btn-secondary" href="#" target="_blank" style="display:inline-block; font-size:16px; line-height:16px; font-weight:700; color:#0b3d91; padding:16px 26px; border-radius:10px;">
+                                        Learn More
+                                      </a>
+                                    </td>
+                                  </tr>
+                                </table>
+
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+
+                      <!-- ANIMATED DIVIDER BAR -->
+                      <tr>
+                        <td style="padding:0 22px 0 22px;">
+                          <div class="animated-bar" style="height:6px; border-radius:999px;">&nbsp;</div>
+                        </td>
+                      </tr>
+
+                      <!-- TWO COLUMN COMPONENT (STACKS ON MOBILE) -->
+                      <tr>
+                        <td align="center" style="padding: 18px 22px 10px 22px;">
+                          <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tr>
+                              <td class="stack" width="50%" valign="top" style="padding: 10px 12px 10px 12px; font-family: Arial, Helvetica, sans-serif;">
+                                <h3 class="h2" style="margin:0; font-size:18px; line-height:24px; color:#111111; font-weight:700;">Why straws matter</h3>
+                                <p class="p" style="margin:10px 0 0 0; font-size:15px; line-height:22px; color:#333333;">
+                                  Straws are small, but they add up fast. One easy swap can keep plastic out of the ocean and out of turtles’ paths.
+                                </p>
+                                <p class="p" style="margin:10px 0 0 0; font-size:15px; line-height:22px; color:#333333;">
+                                  <a class="link" href="#" target="_blank" style="color:#0b3d91; text-decoration:underline;">See the 30-second checklist</a>
+                                </p>
+                              </td>
+
+                              <td class="stack" width="50%" valign="top" style="padding: 10px 12px 10px 12px;">
+                                <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-radius:12px; overflow:hidden;">
+                                  <tr>
+                                    <td align="center" style="background-color:#f3f5f7; padding: 12px;">
+                                      <img src="images/heroturtle.png" width="220" alt="Turtle icon" style="display:block; width:100%; max-width:220px; height:auto; border-radius:12px;" />
+                                      <p style="margin:10px 0 0 0; font-family: Arial, Helvetica, sans-serif; font-size:12px; line-height:18px; color:#666666; text-align:center;">
+                                        Tiny changes. Big ripple effect.
+                                      </p>
+                                    </td>
+                                  </tr>
+                                </table>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+
+                      <!-- THREE COLUMN COMPONENT (STACKS ON MOBILE) -->
+                      <tr>
+                        <td align="center" style="padding: 6px 22px 10px 22px;">
+                          <h3 class="h2" style="margin:0; font-family: Arial, Helvetica, sans-serif; font-size:18px; line-height:24px; color:#111111; font-weight:700; text-align:center;">
+                            3 easy swaps to try today
+                          </h3>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" style="padding: 0 22px 10px 22px;">
+                          <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tr>
+                              <td class="stack" width="33.33%" valign="top" style="padding: 10px 8px;">
+                                <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color:#f3f5f7; border-radius:12px;">
+                                  <tr>
+                                    <td align="center" style="padding: 14px; font-family: Arial, Helvetica, sans-serif;">
+                                      <div style="font-size:22px; line-height:22px;">🥤</div>
+                                      <p style="margin:10px 0 0 0; font-size:14px; line-height:20px; color:#111111; font-weight:700;">Reusable straw</p>
+                                      <p class="p" style="margin:6px 0 0 0; font-size:14px; line-height:20px; color:#333333;">Toss one in your bag.</p>
+                                    </td>
+                                  </tr>
+                                </table>
+                              </td>
+                              <td class="stack" width="33.33%" valign="top" style="padding: 10px 8px;">
+                                <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color:#f3f5f7; border-radius:12px;">
+                                  <tr>
+                                    <td align="center" style="padding: 14px; font-family: Arial, Helvetica, sans-serif;">
+                                      <div style="font-size:22px; line-height:22px;">🧋</div>
+                                      <p style="margin:10px 0 0 0; font-size:14px; line-height:20px; color:#111111; font-weight:700;">Sip lid</p>
+                                      <p class="p" style="margin:6px 0 0 0; font-size:14px; line-height:20px; color:#333333;">No straw needed.</p>
+                                    </td>
+                                  </tr>
+                                </table>
+                              </td>
+                              <td class="stack" width="33.33%" valign="top" style="padding: 10px 8px;">
+                                <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color:#f3f5f7; border-radius:12px;">
+                                  <tr>
+                                    <td align="center" style="padding: 14px; font-family: Arial, Helvetica, sans-serif;">
+                                      <div style="font-size:22px; line-height:22px;">✅</div>
+                                      <p style="margin:10px 0 0 0; font-size:14px; line-height:20px; color:#111111; font-weight:700;">Just say “no”</p>
+                                      <p class="p" style="margin:6px 0 0 0; font-size:14px; line-height:20px; color:#333333;">Skip it when you can.</p>
+                                    </td>
+                                  </tr>
+                                </table>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+
+                      <!-- RADIO / CHECKED TECHNIQUE: TABBED ACTION PLANS -->
+                      <tr>
+                        <td align="center" style="padding: 6px 22px 22px 22px;">
+
+                          <!-- Inputs must come before the tab-wrap for the selectors to work -->
+                          <input class="tab-input" type="radio" name="turtle-tabs" id="tab-home" checked="checked" />
+                          <input class="tab-input" type="radio" name="turtle-tabs" id="tab-school" />
+                          <input class="tab-input" type="radio" name="turtle-tabs" id="tab-work" />
+
+                          <div class="tab-wrap" style="border:1px solid #d7dde3; border-radius:12px; overflow:hidden;">
+                            <div style="padding: 16px; font-family: Arial, Helvetica, sans-serif;">
+                              <h3 class="h2" style="margin:0; font-size:18px; line-height:24px; color:#111111; font-weight:700; text-align:center;">Pick a plan (tap a tab)</h3>
+                              <p class="p" style="margin:8px 0 0 0; font-size:14px; line-height:20px; color:#333333; text-align:center;">Works in some email clients. If not, all tips are still listed below.</p>
+                            </div>
+
+                            <div style="padding: 0 16px 14px 16px;">
+                              <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                <tr>
+                                  <td class="stack" width="33.33%" style="padding:6px;" align="center">
+                                    <label class="tab-label" for="tab-home">Home</label>
+                                  </td>
+                                  <td class="stack" width="33.33%" style="padding:6px;" align="center">
+                                    <label class="tab-label" for="tab-school">School</label>
+                                  </td>
+                                  <td class="stack" width="33.33%" style="padding:6px;" align="center">
+                                    <label class="tab-label" for="tab-work">Work</label>
+                                  </td>
+                                </tr>
+                              </table>
+                            </div>
+
+                            <div style="padding: 0 16px 16px 16px; font-family: Arial, Helvetica, sans-serif;">
+                              <div id="panel-home" class="tab-panel" style="background:#f3f5f7; border-radius:10px; padding:14px;">
+                                <p style="margin:0; font-size:14px; line-height:20px; color:#111111; font-weight:700;">Home plan</p>
+                                <p class="p" style="margin:8px 0 0 0; font-size:14px; line-height:20px; color:#333333;">Add “no straw” to delivery notes, and keep 1 reusable straw by the sink.</p>
+                              </div>
+                              <div id="panel-school" class="tab-panel" style="background:#f3f5f7; border-radius:10px; padding:14px;">
+                                <p style="margin:0; font-size:14px; line-height:20px; color:#111111; font-weight:700;">School plan</p>
+                                <p class="p" style="margin:8px 0 0 0; font-size:14px; line-height:20px; color:#333333;">Ask your cafeteria for straw-on-request and share this email with a club.</p>
+                              </div>
+                              <div id="panel-work" class="tab-panel" style="background:#f3f5f7; border-radius:10px; padding:14px;">
+                                <p style="margin:0; font-size:14px; line-height:20px; color:#111111; font-weight:700;">Work plan</p>
+                                <p class="p" style="margin:8px 0 0 0; font-size:14px; line-height:20px; color:#333333;">Request a straw-free default in the kitchen and switch to sip lids for events.</p>
+                              </div>
+
+                              <!-- Fallback always-visible list (in case CSS is stripped) -->
+                              <div style="padding-top:12px;">
+                                <p style="margin:0; font-size:12px; line-height:18px; color:#666666;">Fallback tips:</p>
+                                <p style="margin:6px 0 0 0; font-size:12px; line-height:18px; color:#666666;">Home: “no straw” notes + 1 reusable straw by the sink.</p>
+                                <p style="margin:6px 0 0 0; font-size:12px; line-height:18px; color:#666666;">School: straw-on-request + share with a club.</p>
+                                <p style="margin:6px 0 0 0; font-size:12px; line-height:18px; color:#666666;">Work: straw-free default + sip lids for events.</p>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- FOOTER -->
+          <tr>
+            <td align="center" class="mobile-padding" style="padding: 22px 40px 28px 40px; font-family: Arial, Helvetica, sans-serif; background-color:#ffffff;">
+              <p style="margin:0; font-size:12px; line-height:18px; color:#666666; text-align:center;">
+                You’re receiving this email because you signed up for Turtle Committee updates.
+              </p>
+              <p style="margin:10px 0 0 0; font-size:12px; line-height:18px; color:#666666; text-align:center;">
+                <a class="link" href="#" target="_blank" style="color:#0b3d91; text-decoration:underline;">Unsubscribe</a>
+              </p>
+            </td>
+          </tr>
+
+        </table>
+        <!-- /INNER FIXED TABLE (600px) -->
+
+      </td>
+    </tr>
+  </table>
+
+</body>
+</html>
